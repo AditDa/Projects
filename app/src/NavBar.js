@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import Genres from './grid.js';
 
@@ -35,8 +34,7 @@ function NavBar() {
             </NavDropdown>
 
             <Nav.Link className="me-4" onClick={() => navigate('Search')}>Search</Nav.Link>
-            <Nav.Link href="#shazam" className="me-4">Shazam</Nav.Link>
-            <Nav.Link href="#history" className="me-4">History</Nav.Link>
+            <Nav.Link className="me-4" onClick={() => navigate('History')}>History</Nav.Link>
             <Nav.Link href="#contact-us" className="me-4">Contact Us</Nav.Link>
             <Nav.Link href="#help" className="me-4">Help</Nav.Link>
           </Nav>

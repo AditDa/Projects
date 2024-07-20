@@ -6,6 +6,9 @@ import Login from './Login.js';
 import SignUp from './SignUp.js';
 import NavBar from './NavBar';
 import PrivateRoute from "./PrivateRoute";
+import Searchbar from './Search.js'; 
+import HistoryDisplay from './history.js'; 
+
 
 export default function App() {
   return (
@@ -19,6 +22,8 @@ export default function App() {
           <Route exact path="/SignUp" element={<SignUp />} />
           <Route element={<PrivateRoute />}>
             <Route exact path="/NavBar" element={<NavBar />} />
+            <Route exact path="/NavBar/Search" element={<Searchbar />} />
+            <Route exact path="/NavBar/History" element={<HistoryDisplay />} />
           </Route>
         </Routes>
       </UserProvider>
